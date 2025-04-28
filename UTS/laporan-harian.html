@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Harian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PT Vamos Blaugrana</h1>
+</header>
+
+<nav>
+    <a href="beranda.html">Beranda</a>
+    <a href="pendaftaran.html">Pendaftaran</a>
+    <a href="laporan-harian.html">Laporan Harian</a>
+    <a href="profil.html">Profil</a>
+    
+</nav>
+
+<main>
+    <h2>Form Laporan Harian</h2>
+    <form action="hasil-laporan.html" method="post">
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+
+        <label for="nama">Nama Karyawan:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="kegiatan">Kegiatan Hari Ini:</label>
+        <textarea id="kegiatan" name="kegiatan" rows="5" required></textarea>
+
+        <label for="kendala">Kendala yang Dihadapi:</label>
+        <textarea id="kendala" name="kendala" rows="4"></textarea>
+
+        <label for="solusi">Solusi/Perbaikan:</label>
+        <textarea id="solusi" name="solusi" rows="4"></textarea>
+
+        <button type="submit">Kirim Laporan</button>
+    </form>
+</main>
+
+<footer>
+    &copy; 2025 Treble. #Novendri.
+</footer>
+
+</body>
+</html>

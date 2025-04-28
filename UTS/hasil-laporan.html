@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Laporan Harian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        .data {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PT Vamos Blaugrana</h1>
+</header>
+
+<nav>
+    <a href="beranda.html">Beranda</a>
+    <a href="pendaftaran.html">Pendaftaran</a>
+    <a href="#">Layanan</a>
+    <a href="#">Kontak</a>
+    <a href="profil.html">Profil</a>
+    <a href="laporan-harian.html">Laporan Harian</a>
+</nav>
+
+<main>
+    <h2>Hasil Laporan Harian</h2>
+
+    <div class="data">
+        <p><strong>Tanggal:</strong> <?php echo htmlspecialchars($_POST['tanggal'] ?? ''); ?></p>
+        <p><strong>Nama Karyawan:</strong> <?php echo htmlspecialchars($_POST['nama'] ?? ''); ?></p>
+        <p><strong>Kegiatan Hari Ini:</strong> <?php echo nl2br(htmlspecialchars($_POST['kegiatan'] ?? '')); ?></p>
+        <p><strong>Kendala yang Dihadapi:</strong> <?php echo nl2br(htmlspecialchars($_POST['kendala'] ?? '')); ?></p>
+        <p><strong>Solusi/Perbaikan:</strong> <?php echo nl2br(htmlspecialchars($_POST['solusi'] ?? '')); ?></p>
+    </div>
+
+</main>
+
+<footer>
+    &copy; 2025 Treble. #Novendri.
+</footer>
+
+</body>
+</html>
