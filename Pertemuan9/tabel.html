@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Tabel
+  </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="profile.html">Profil</a></li>
+      <li><a href="about.html">Tentang</a></li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <h1>Halo, saya Novendri 👋</h1>
+    <p>Halaman ini berisi cara membuat tabel html. pada umumnya 
+        membuat tabel di html ada 3 cara:
+        <dl>
+            <dt>Table</dt>
+            <dd>sebagai tag unutuk membuat tabel</dd>
+            <dt>TR</dt>
+            <dd>Untuk menambahakn baris</dd>
+            <dt>TD</dt>
+            <dd>untuk menambahkan kolom</dd>
+            <dt>Rowspan</dt>
+            <dd>untuk menggabungkan baris</dd>
+            <dt>Colspan</dt>
+            <dd>untuk menggabungkan kolom</dd>
+        </dl>
+    </p>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <td rowspan="2" bgcolor="blueviolet">baris 1 </td>
+            <td>baris 1 </td>
+            <td colspan="2" bgcolor="yellow">baris 1 </td>
+            
+        </tr>
+
+        <tr>
+            
+            <td>baris 2</td>
+            <td>baris 2</td>
+            <td>baris 2</td>
+        </tr>
+
+        <tr>
+            <td>baris 3 </td>
+            <td>baris 3 </td>
+            <td>baris 3 </td>
+            <td>baris 3 </td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" bgcolor="green">baris 4</td>
+            <td>baris 4</td>
+            <td>baris 4</td>
+            <td>baris 4</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" bgcolor="red">baris 5</td>
+            <!-- <td >baris 5</td> -->
+            
+            
+        </tr>
+
+    </table>
+
+    <hr>
+    <p>Copyright</p>
+  </section>
+</body>
+</html>

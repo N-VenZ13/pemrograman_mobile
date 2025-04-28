@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokumen - Novendri</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #003049;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ffd60a;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #003049;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 15px 0;
+    }
+    li a {
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    li a:hover {
+      text-decoration: underline;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profil</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="dokumen.html" class="active">Dokumen</a></li>
+    </ul>
+  </nav>
+
+  <div class="container fade-in">
+    <h1>📄 Dokumen Saya</h1>
+    <ul>
+      <li><a href="assets/CV_Novendri.pdf" target="_blank">CV Novendri</a></li>
+      <li><a href="assets/Sertifikat_IoT_Nasional.pdf" target="_blank">Sertifikat Lomba IoT Nasional</a></li>
+      <li><a href="assets/Proposal_Project_Karet.pdf" target="_blank">Proposal Proyek Karet Berbasis IoT</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Novendri</title>
+  <style>
+    html {
+    scroll-behavior: smooth;
+    }
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f9fd;
+      color: #333;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    header nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem 5%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .intro h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: #0d47a1;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .social-links {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      background-color: #bbdefb;
+    }
+
+    .social-links img {
+      width: 20px;
+      height: 20px;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #1565c0;
+      margin-top: 3rem;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0d47a1;
+    }
+
+    .footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 5rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header nav {
+        margin-top: 0.5rem;
+      }
+
+      .intro h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Novendri</h1>
+    <nav>
+      <a href="#project">Project</a>
+      <a href="#experience">Pengalaman</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Halo, saya Novendri 👋</h1>
+    <p>Web & Mobile Developer yang senang membangun solusi digital kreatif dan efisien.</p>
+
+    <div class="social-links">
+      <a href="https://github.com/N-VenZ13" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"> GitHub
+      </a>
+      <a href="https://linkedin.com/in/novendri-noven-a0896a339" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"> LinkedIn
+      </a>
+      <a href="mailto:vevenz13@gmail.com">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> Email
+      </a>
+    </div>
+  </section>
+
+  <section id="project" class="fade-in">
+    <h2 class="section-title">🛠️ Project</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Homebook.id</h3>
+        <p>Aplikasi manajemen rumah tangga berbasis Kotlin & Laravel dengan arsitektur MVVM dan database MySQL.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Farm IoT</h3>
+        <p>Sistem monitoring suhu & kelembaban berbasis ESP32 dan Blynk, dengan data real-time ke web.</p>
+      </div>
+      <div class="card">
+        <h3>Portofolio Website</h3>
+        <p>Website portofolio responsif menggunakan HTML, CSS, dan desain bersih yang menarik.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="fade-in">
+    <h2 class="section-title">💼 Pengalaman</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Ketua OSIS SMA</h3>
+        <p>Memimpin organisasi siswa, menyelenggarakan event sekolah, dan mengasah leadership skill.</p>
+      </div>
+      <div class="card">
+        <h3>Mobile Developer - Cyborg IT</h3>
+        <p>Mengerjakan project Android native, membuat UI/UX modern, dan mengintegrasi REST API Laravel.</p>
+      </div>
+      <div class="card">
+        <h3>Peserta Lomba IoT Nasional</h3>
+        <p>Proyek alat pemantauan kualitas lateks berbasis sensor pH dan koneksi ke dashboard Blynk.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>© 2025 Novendri. Dibuat dengan ❤️ & semangat belajar.</p>
+    
+    <ul style="list-style: none; padding: 0; margin: 20px 0;">
+    <li><a href="assets/CV_Novendri.pdf" target="_blank" style="color: #ffd60a; text-decoration: none;">📁 CV Novendri</a></li>
+    <li><a href="assets/Sertifikat_IoT_Nasional.pdf" target="_blank" style="color: #ffd60a; text-decoration: none;">🏆 Sertifikat </a></li>
+    
+  </ul>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  
+
+</body>
+</html>
